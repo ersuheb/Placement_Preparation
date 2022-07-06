@@ -1,0 +1,242 @@
+/*
+
+Conditional Statements
+    Yes or No?
+
+    E.g. I/P: a,b
+         O/p: if a>b, print "a is greater than b"
+              else, print "a is not greater than b"
+
+
+    Thus, if(a>b){
+            cout << a << endl;
+            }
+          if(a<=b){
+            cout << b << endl;
+            }
+        
+    In the above example, instead of checking again for b>a in the second if block,
+    we know that the first if condition does not get fulfilled, then the second block must be executed no matter what.
+    This can be achieved using if-else block.
+
+
+cin >> n waits for the user to enter a value and stores it in n.
+
+E.g. 
+    int a;
+    cin >> a;
+1. Variable a will get initialized with a random 'garbage' value.
+2. Program waits for the user to give input (an integer) to a and stores a with that value.
+
+#include <iostream>
+using namespace std;
+
+int main(void){
+    int a;
+    cout << "Value of a just after initialization = " << a << endl;
+    cin >> a;
+    cout << "Value of a just after cin statement = " << a << endl;
+    return 0;
+}
+
+Output:
+5
+Value of a just after initialization = 4201131
+Value of a just after cin statement = 5
+
+
+if-else:
+#include <iostream>
+using namespace std;
+
+int main(){
+    int a;
+    cin >> a;
+
+    if(a>0){
+        cout<<"Positive"<<endl;
+    }
+    return 0;
+}
+
+If the input is negative in the above program
+    The if block doesn't execute and the program exits without printing anything.
+
+int main(){
+    int a;
+    cin >> a;
+
+    if(a>0){
+        cout<<"Positive"<<endl;
+    }
+    else{
+        cout<<"Negative"<<endl;
+    }
+    return 0;
+}
+
+
+Program to Compare two numbers:
+
+    #include <iostream>
+    using namespace std;
+    
+    int main(){
+
+        int a,b;
+        cout << "Enter the value of a: ";
+        cin >> a;
+        cout << "Enter the value of b: ";
+        cin >> b;
+
+        if(a > b){
+            cout << "a is greater than b" << endl;
+        }
+        if(b > a){
+            cout << "b is greater than a" << endl;
+        }
+        return 0;
+
+    }
+
+    Note: cin ignores enter(\n), tab(\t), and space(' ') while taking input. These are called whitespace characters.
+            use cin.get to read these whitespace characters.
+
+
+Using nested if-else:
+
+    #include <iostream>
+    using namespace std;
+    
+    int main(){
+
+        int a;
+        cout << "Enter the value of a: ";
+        cin >> a;
+
+        if(a > 0){
+            cout << "a is positive" << endl;
+        }
+        else{
+            if(a < 0){
+                cout << "a is negative" << endl;
+            }
+            else{
+                cout << "a is zero" << endl;
+            }
+        }
+
+    }
+
+To get rid of nested-if else 
+    use else if
+
+    Note: else if and else are optional.
+          else can be used as a default case.
+
+
+
+While Loop
+    while the condition is true, keep on executing the block
+
+    E.g. 
+    
+    Print 1 to n
+         
+         #include <iostream>
+         using namespace std;
+
+         int main(){
+             int n;
+             cout << "Enter the value of n: ";
+             cin >> n;
+             int i = 1;
+             while(i <= n){
+                 cout << i << endl;
+                 i++;
+             }
+             return 0;
+         }
+
+
+    Find the sum of 1 to n
+
+         #include <iostream>
+         using namespace std;
+         
+         int main(){
+             int n;
+             cout << "Enter the value of n: ";
+             cin >> n;
+             int i = 1;
+             int sum = 0;
+             while(i <= n){
+                 sum = sum + i;
+                 i++;
+             }
+             cout << "Sum of 1 to n = " << sum << endl;
+             return 0;
+         }
+
+
+    Find sum of all even numbers from 1 to n
+    
+         #include <iostream>
+         using namespace std;
+         
+         int main(){
+             int n;
+             cout << "Enter the value of n: ";
+             cin >> n;
+             int i = 2;
+             int sum = 0;
+             while(i <= n){
+                 if(i%2 == 0){
+                     sum = sum + i;
+                 }
+                 i++;
+             }
+             cout << "Sum of all even numbers from 1 to n = " << sum << endl;
+             return 0;
+         }
+
+
+    Fahrenheit to Celsius
+    
+        #include <iostream>
+        using namespace std;
+
+        int main(){
+            float fahrenheit;
+            cout << "Enter the temperature in fahrenheit: ";
+            cin >> fahrenheit;
+            float celsius = (5.0/9) * (fahrenheit - 32);
+            cout << "Temperature in Celsius = " << celsius << endl;
+            return 0;
+        }
+
+    
+    Prime or Not?
+
+        #include <iostream>
+        using namespace std;
+
+        int main(){
+            int n;
+            cout << "Enter the value of n: ";
+            cin >> n;
+            int i = 2;
+            while(i <= n){
+                if(n%i == 0){
+                    cout << "Not a prime number" << endl;
+                    break;
+                }
+                i++;
+            }
+            cout << "Prime number" << endl;
+            return 0;
+        }
+
+
+
+*/
