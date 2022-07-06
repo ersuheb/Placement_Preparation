@@ -1,0 +1,279 @@
+/* 
+
+    Source Code --> Compiler --> Machine Code --> Executable Code (.exe)
+
+    Compiler: It is a program that translates the source code into machine code.
+
+    Machine Code: It is a sequence of bits that represents the instructions that the computer can execute.
+
+    Executable Code: It is a program that is run on the computer.
+
+    Source Code: It is a text file that contains the instructions that the computer can execute.
+
+    IDEs (Integrated Development Environments): They are software that allow you to write and run your programs.
+    E.g. Visual Studio, Eclipse, NetBeans, etc.
+
+
+First Program in C++:
+
+    1. Our Program will find int main(){} and start executing from there.
+
+    2. {} These brackets show the 'scope' of the main function.
+
+    3. In C++, we use 'cout' to print something to the screen.
+
+    4. This cout is already defined in the header file 'iostream' which must be included before using it.
+
+    5. #include<file_name> is a preprocessor directive which runs before the program is compiled and includes the file to be used later in the source code.
+
+    5. Namespaces: (https://stackoverflow.com/questions/18914106/what-is-the-use-of-using-namespace-std?lq=1)
+        using namespace std;
+
+    6. Using cout:
+       We use '<<' after the cout to print something to the screen within std namespace.
+
+       #include<iostream>
+       using namespace std;
+
+       int main()
+       {
+           cout << "Abhi prhlo mauka hai";
+           
+       }
+    
+    7. endl: used to enter a new line just like enter key.
+                endl is like a '\n' in the console.
+
+    8. (;): is used to terminate statements.
+
+
+Data Types: Different types of data to be stored in memory. E.g. int, float, char, etc.
+
+    1. int: Integer data type. (stores integers like -10, -5, 0, 5, 10)
+    2. float: Floating point data type. (stores floating point numbers like -10.5, -5.5, 0.0, 5.5, 10.5)
+    3. char: Character data type. (stores single characters like 'a', 'b', 'c', 'd', 'e')
+    4. double: Double precision data type. (stores double precision numbers like -10.5, -5.5, 0.0, 5.5, 10.5)
+    5. bool: Boolean data type. (stores true or false values like true, false)
+    6. void: Void data type. (stores nothing)
+    7. string: String data type. (stores strings like "Abhi", "Prhlo", "Mauka", "Hai")
+    etc..
+
+    Different data types used different amount of memory. AMount of memory used also depends on the architecture of your CPU.
+
+    1. int: 2 or 4 bytes
+    2. float: 4 bytes
+    3. char: 1 byte
+    4. double: 8 bytes
+    5. bool: 1 byte
+    6. void: 0 bytes
+    etc..
+
+
+Variable Naming / Nomenclatre:
+
+    1. can contain alphabetical characters, number, and underscores.
+    2. cannot start with a number.
+    3. cannot be keywords like int, float, char, double, bool, void, etc.
+    4. case sensitive.
+    5. cannot contain special symbols like !, @, #, $, %, etc.
+    
+    Don't use same variable name multiple times.
+       int a = 10;
+       cout << a;
+       char a = 'a';
+       cout << a;
+
+    Using different data types in code:
+
+    #include<iostream>
+    using namespace std;
+
+    int main()
+    {
+        int a = 10;
+        float b = 10.5;
+        char c = 'a';
+        double d = 10.5;
+        bool e = true;
+        void f = NULL;
+        string g = "Suheb";
+        cout << a << endl;
+        cout << b << endl;
+        cout << c << endl;
+        cout << d << endl;
+        cout << e << endl;
+        cout << f << endl;
+        cout << g << endl;
+    }
+
+
+    Check the size of different data types for your system using
+    sizeof(variable_name);
+
+    #include<iostream>
+    using namespace std;
+
+    int main()
+    {
+        cout << sizeof(int) << endl;
+        cout << sizeof(float) << endl;
+        cout << sizeof(char) << endl;
+        cout << sizeof(double) << endl;
+        cout << sizeof(bool) << endl;
+        cout << sizeof(void) << endl;
+        cout << sizeof(string) << endl;
+    }
+
+
+How is data stored in a memory location?
+
+    E.g: int a = 8; // int takes 4 bytes = 32 bits
+
+    in binary, 8 = 1000 (4 bits needed)
+
+    therefore int a = 00000000 00000000 00000000 00001000 (32 bits)
+
+    E.g. char c = 'a'; // char takes 1 byte = 8 bits
+        characters are mapped to the standard ASCII values
+        'a' = 97 (8 bits)        'A' = 65 (8 bits)
+        'b' = 98 (8 bits)        'B' = 66 (8 bits)
+        'c' = 99 (8 bits)        'C' = 67 (8 bits)
+        .                         .
+        .                         .
+        'z' = 122 (8 bits)       'Z' = 90 (8 bits)
+
+        ASCII Table (https://ascii.cl/):
+
+    char c = 'a';
+    ---ASCI--- 97 ---Binary--- 00000101 ---Store--- 01100001 (1 byte)
+
+
+Type Casting
+
+    Conversion of one data type to another (if it is valid).
+
+    E.g. 
+
+        int a = 'a';
+        variable a will store the ascii value of 'a' which is 97.
+
+        char ch = 98;
+        98 will automatically get typecasted to its corresponding character.
+        This automatic typecasting is called implicit type casting.
+
+    What if we typecast from int to char but the value is too large to be stored in a char?
+        A warning is thrown and the last byte from the original value is given to the character.
+
+    How are negative numbers stored?
+        The first bit tells us whether the number is positive or negative.
+        First Bit -- 0 -- means positive
+                  -- 1 -- means negative
+        
+    Steps to store -5 in binary format:
+      1. Ignore the -ve sign. (5)
+      2. Write the number in binary. (0101)
+      3. Take its 2's complement. 
+
+    Why do we need to take 2's complement?
+        If we stored numbers as it is without using 2's complement, then 100----00 and 000----00 will be equal and thus waste space.
+
+    Stored only Positive Integers
+        The default signed representation allows us to store both positive and negative values.
+        To use only positive integers, we use unsigned.
+            E.g. unsigned int a = 5;
+    
+    What if we store a negative value in an unsigned number?
+        E.g. unsigned int a = -112;
+             cout << a << endl;
+             Output: 4294967184
+
+        Explanation:
+            We tried to store -112.
+            -112 = 2's complement of 112
+            2's complement = 11.....10010000 
+            Unsigned int uses all 32 bits to store the value and the MSB (=1) will make the value.
+            An unsigned int does not use the 2's complement again to display the number.
+            Thus, 11.....10010000 gets printed as it is decimal.
+            1111....10010000 = 4294967184 (Decimal Number)
+            //Check by yourself too: https://www.rapidtables.com/convert/number/binary-to-decimal.html
+        
+
+Basic Arithmetic Operators:
+    +: Addition
+    -: Subtraction
+    *: Multiplication
+    /: Division
+    %: Modulus
+    ++: Increment
+    --: Decrement
+
+    E.g.
+        int a = 10;
+        int b = 20;
+        int c = a + b;
+        cout << c << endl;
+        Output: 30
+
+   1. int/int = int (Floor value of answer)
+      E.g. 5/2 = 1
+           3/5 = 0
+           9/2 = 4
+ 
+   2. int/float = float 
+      float/int = float
+        E.g. 5.0/2 = 2.5
+
+   3. double/int = double
+      int/double = double
+
+Relational Operators:
+    <: Less than
+    >: Greater than
+    <=: Less than or equal to
+    >=: Greater than or equal to
+    ==: Equal to
+    !=: Not equal to
+
+    E.g.
+        int a = 10;
+        int b = 20;
+        if(a < b)
+        {
+            cout << "a is less than b" << endl;
+        }
+        else
+        {
+            cout << "a is not less than b" << endl;
+        }
+        Output: a is not less than b
+
+Logical Operators:
+    &&: And
+    ||: Or
+    !: Not
+
+    1. Logical AND:
+            All the conditions must be true for the output to be true.
+            E.g. int a = 5, b = 10, c = 15;
+                 cout <<((a>0) && (b!=0) && (c<=15)) << endl;
+                 Output:
+                    1
+    2. Logical OR:
+            At least one of the conditions must be true for the output to be true.
+            E.g. int a = 5, b = 10, c = 15;
+                 cout <<((a>5) || (b<10) || (c>=15)) << endl;
+                 Output:
+                    1
+    
+    3. Logical NOT:
+            If the condition is true, then it becomes false.
+            E.g. int a = 10, b = 0;
+                 cout <<(!a)<< endl;
+                 cout <<(!b)<< endl;
+                 Output:
+                    0
+                    1
+                
+
+
+*/
