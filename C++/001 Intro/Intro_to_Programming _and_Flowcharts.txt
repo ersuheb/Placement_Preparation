@@ -1,4 +1,20 @@
+C++ (pronounced "see plus plus") is a  general-purpose, multi-paradigm, statically typed ,  free-form programming language, supporting procedural; 
+object-oriented; generic; and (more recently) functional programming paradigms, and is well-known for facilitating low-cost abstractions in code. 
+If any of the preceding concepts are unfamiliar to you, do not worry, they will be introduced in subsequent sections.
+During the 1990s C++ grew to become one of the most popular computer programming languages, and it is still the third most popular language, 
+according to the Tiobe rankings as of November 2017. C++ was first designed with a focus on systems programming, but its features also make it 
+an attractive language for creating end-user applications, especially those with resource constraints, or that require very high performance. 
+C++ is extensively used in game development, web clients/server side, back office of financial applications and robotics.
 
+History and standardization
+Bjarne Stroustrup, a Computer Scientist from Bell Labs, was the designer and original implementer of C++ (originally named "C with Classes") 
+during the 1980s, as an enhancement to the C programming language. C, which had also been created at Bell Labs for the purpose of implementing 
+the Unix operating system by Dennis Ritchie, gave users great control over hardware at a higher conceptual level than assembly language (ASM), 
+but still with limited expressivity. Stroustrup decided to combine features for program organization from the object-oriented Simula language 
+with C's efficient use of hardware resources. Enhancements started with the addition of object-oriented concepts like classes and virtual functions, 
+followed by, among many features, namespaces, operator overloading, templates, and exception handling. These and other features are covered in 
+detail in this book. Several features of C++ were later adopted by C, including the const keyword for creating immutable values in a program, 
+inline functions, declarations in for loops , and C++-style comments (using the // symbol).
 
 How to solve a programming problem?
 1. Understand the problem. 

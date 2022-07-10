@@ -1,0 +1,83 @@
+An Operator is a symbol that tells the computer to perform certain mathematical or logical manipulations. 
+Operators are used in programs to manipulate data and variables.
+
+
+C operators can be classified into a number of categories. They are:
+
+Arithmetic operators.
+Relational Operators.
+Logical Operators.
+Assignment Operators.
+Increment and Decrement Operators.
+Conditional Operators.
+Bitwise Operators.
+Special Operators.
+
+
+Arithmetic operators include +, -, *, /, %, which performs all mathematical manipulations. These operators can operate on any built-in data type allowed in C. 
+
+
+Relational operators are used to compare two operands, and depending on their relation, certain decisions are taken. 
+For example, it can be used to compare the age of two persons, price of two items and so on. There are 6 types of relational operators. 
+They are: 
+<	Is less than
+>	Is greater than
+<=	Is less than or equal to
+>=	Is greater than or equal to
+==	Is equal to
+!=  Is not equal to
+
+
+C supports three Logical Operators. They are:
+&&	Logical AND
+||	Logical OR
+!	Logical NOT
+
+
+Assignment operators are used to assign the result of an expression to a variable. 
+Usually, = operator is used. There is an additional ‘shorthand’ assignment operators of the form.
+V op = exp;
+Here,
+V= variable
+exp = expression and
+op = a binary arithmetic operator.
+The Operator op= is known as the shorthand assignment operator.
+
+Statement with simple assignment operator	Statement with shorthand operator
+            a = a + 1	                                a += 1
+            a = a - 1	                                a -= 1
+            a = a * (n+1)	                            a *= n + 1
+            a = a / (n+1)	                            a /= n + 1
+            a = a % b	                                a % = b
+
+
+C supports two unique operators that are not found in other languages. They are: ++ and -- (increment and decrement operators respectively).
+The operator ++ adds 1 to the operand, while – subtracts 1. Both are unary operators and take the following form:
+++m; or m++;
+--m; or m--;
+++m; is equivalent to m = m + 1;
+--m; is equivalent to m = m – 1;
+
+
+A ternary operator pair ?: is available in C to construct conditional expressions of the form:
+Exp1? Exp2: Exp3
+Exp1, Exp2 and Exp3 are expressions. The operator ?: works as follows:
+Exp1 is evaluated first. If it is nonzero (true), then exp2 expression is evaluated and becomes the value of the expression. 
+If exp1 is false, exp3 is evaluated and its value becomes the value of the expression. Here only one of the expressions is evaluated.
+
+
+Bitwise operators are special operators that are used for manipulation of data at the bit level. 
+These operators are used for testing the bits, or shifting them to right or left. Bitwise operators may not be applied to float or double.
+&	Bitwise AND
+|	Bitwise OR
+^	Bitwise exclusive OR
+<<	Shift Left
+>>	Shift Right
+~	One’s Complement
+
+
+C supports some special operators such as :
+comma operator
+sizeof operator
+pointer operators(& and *)
+member selection operators.
